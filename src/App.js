@@ -54,7 +54,7 @@ export default function App() {
   }
 
   try {
-    await axios.post('http://projetoestoquefamiliar-production.up.railway.app/movimento', {
+    await axios.post('https://projetoestoquefamiliar-production.up.railway.app/movimento', {
       produto,
       quantidade: parseInt(quantidade),
       tipo: tipoMovimento,
@@ -71,7 +71,7 @@ export default function App() {
 
   const buscarMovimentos = async () => {
     try {
-      const res = await axios.get('http://projetoestoquefamiliar-production.up.railway.app/movimentos');
+      const res = await axios.get('https://projetoestoquefamiliar-production.up.railway.app/movimentos');
       setMovimentos(res.data);
     } catch (error) {
       console.error('Erro ao buscar movimentos', error);
